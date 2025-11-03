@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Claqueta amarilla - estilo minimalista -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Movie clapper icon">
+  <!-- Fondo azul oscuro -->
+  <rect width="128" height="128" rx="20" fill="#0f172a"/>
+  <!-- Cuerpo de la claqueta -->
+  <rect x="24" y="48" width="80" height="56" rx="8" fill="#facc15"/>
+  <!-- Líneas internas -->
+  <rect x="36" y="64" width="56" height="4" rx="2" fill="#0f172a"/>
+  <rect x="36" y="76" width="56" height="4" rx="2" fill="#0f172a"/>
+  <!-- Parte superior inclinada -->
+  <polygon points="24,44 104,28 104,40 24,56" fill="#facc15"/>
+  <!-- Franjas oscuras -->
+  <path d="M32 45 L38 44 L34 50 Z" fill="#0f172a"/>
+  <path d="M46 42 L52 41 L48 47 Z" fill="#0f172a"/>
+  <path d="M60 39 L66 38 L62 44 Z" fill="#0f172a"/>
+  <path d="M74 36 L80 35 L76 41 Z" fill="#0f172a"/>
+  <path d="M88 33 L94 32 L90 38 Z" fill="#0f172a"/>
+</svg>

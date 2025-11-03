@@ -1,0 +1,55 @@
+
+.area{
+     background: radial-gradient(circle at center, #4e54c8 0%, #2e3192 60%, #1b1e3b 100%); 
+    width: 100%;
+    height:100vh;
+}
+
+.floatingIcons {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.floatingIcons li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  animation: floatUp linear infinite;
+  color: rgba(255, 255, 255, 0.15);
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.3));
+  opacity: 0;
+}
+
+/* Variaciones */
+.floatingIcons li:nth-child(1) { left: 10%; font-size: 6rem; animation-duration: 20s; animation-delay: 0s; color: #fffb00; }
+.floatingIcons li:nth-child(2) { left: 25%; font-size: 7rem; animation-duration: 25s; animation-delay: 5s; color: #00ccff; }
+.floatingIcons li:nth-child(3) { left: 40%; font-size: 5rem; animation-duration: 22s; animation-delay: 2s; color: #ffcc00; }
+.floatingIcons li:nth-child(4) { left: 55%; font-size: 2.8rem; animation-duration: 28s; animation-delay: 8s; color: #00ff88; }
+.floatingIcons li:nth-child(5) { left: 70%; font-size: 3.2rem; animation-duration: 24s; animation-delay: 3s; color: #ff66ff; }
+.floatingIcons li:nth-child(6) { left: 80%; font-size: 2.3rem; animation-duration: 26s; animation-delay: 6s; color: #ffaa33; }
+.floatingIcons li:nth-child(7) { left: 90%; font-size: 2.5rem; animation-duration: 21s; animation-delay: 9s; color: #33ffcc; }
+.floatingIcons li:nth-child(8) { left: 5%; font-size: 2rem; animation-duration: 30s; animation-delay: 4s; color: #fff133; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.4;
+    filter: drop-shadow(0 0 12px currentColor);
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(60deg);
+    opacity: 0;
+  }
+}
