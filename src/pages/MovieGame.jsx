@@ -8,7 +8,7 @@ import { FaArrowLeft } from "react-icons/fa"
 import { Link, NavLink } from "react-router-dom"
 import { LoadingVideo } from "../skeleton loader/LoadingVideo"
 import { LoadingCoverImg } from "../skeleton loader/LoadingCoverImg"
-
+import logo from '../assets/logo (1).png'
 
 
 
@@ -52,7 +52,7 @@ export const MovieGame = () => {
                     </Link>
                     <div className="flex flex-col items-center justify-between grow ">
                         <header className="">
-                            <img src="../public/logo (1).png" alt="logo" className="w-55 drop-shadow-[0_0_10px_rgba(255,200,80,0.4)]" />
+                            <img src={logo} alt="logo" className="w-55 drop-shadow-[0_0_10px_rgba(255,200,80,0.4)]" />
                         </header>
                         <div className="flex flex-col items-center md:order-2 lg:order-0 md:my-4 lg:my-0">
                             <HiddenTitle title={title} showTitle={showTitle} />

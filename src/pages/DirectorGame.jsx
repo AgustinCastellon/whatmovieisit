@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 import { useEffect, useState } from "react"
 import { MovieGuessChecker } from "../components/MovieGuessChecker"
 import { LoadingDefault } from "../skeleton loader/LoadingDefault"
-
+import logo from '../assets/logo (1).png'
 
 export const DirectorGame = () => {
 
@@ -31,7 +31,7 @@ export const DirectorGame = () => {
                 </button>
             </Link>
             <header className="">
-                <img src="../public/logo (1).png" alt="logo" className="w-55" />
+                <img src={logo} alt="logo" className="w-55" />
             </header>
             <h1 className="font-baloo text-4xl mt-5 text-white font-extrabold drop-shadow-lg drop-shadow-black/70 ">NOMBRE</h1>
             <div className="mb-10">

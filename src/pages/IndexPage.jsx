@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom"
 import { CreditsModal } from "../components/modals/CreditsModal"
 import { useState } from "react";
 import { HowToPlayModal } from "../components/modals/HowToPlayModal";
-
+import logo from '../assets/logo (1).png'
 
 export const IndexPage = () => {
 
@@ -14,7 +14,7 @@ export const IndexPage = () => {
         <div className="h-screen">
             {creditsOpen && <CreditsModal creditsOpen={creditsOpen} setCreditsOpen={setCreditsOpen} />}
             {howtoOpen && <HowToPlayModal howtoOpen={howtoOpen} setHowtoOpen={setHowtoOpen} />}
-            <img src="../public/logo (1).png" alt="logo" className="w-75 mx-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-fadeIn" />
+            <img src={logo} alt="logo" className="w-75 mx-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-fadeIn" />
             <nav className="mt-3 bg-black/20 rounded-xl shadow-lg shadow-black/50 p-5 w-fit mx-auto backdrop-blur-xl border border-amber-300/30">
                 <ul className="font-baloo flex flex-col gap-3 text-center justify-center items-center">
                     <Link to={"game/popular"}>
