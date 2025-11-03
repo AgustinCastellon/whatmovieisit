@@ -1,7 +1,7 @@
 import { FaSearch } from "react-icons/fa"
 import { useSearchMatch } from "../hook/useSearchMatch"
 import { useState } from "react"
-import { IncorrectAnswerModal } from "./modals/incorrectAnswerModal";
+import { IncorrectAnswerModal } from "./modals/IncorrectAnswerModal";
 import { CorrectAnswerModal } from "./modals/CorrectAnswerModal";
 
 
