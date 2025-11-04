@@ -27,7 +27,7 @@ export const HowToPlayModal = ({ howtoOpen, setHowtoOpen }) => {
 
             <div
                 className={`absolute w-[90vw] max-w-[700px] z-999 max-h-[80vh] overflow-y-auto rounded-xl shadow-lg mx-auto bg-gradient-to-b from-indigo-900 to-indigo-950 
-                top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-indigo-400/30 text-white p-6
+                top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 border border-amber-300/30 text-white p-6
                 transition-all duration-400 ease-in-out transform ${show
                         ? 'opacity-100 scale-100 -translate-x-1/2 -translate-y-1/2'
                         : 'opacity-0 scale-90 -translate-x-1/2 -translate-y-1/2'
@@ -91,7 +91,7 @@ export const HowToPlayModal = ({ howtoOpen, setHowtoOpen }) => {
                     </div>
                 </section>
 
-                <div className="border-t border-white/20 w-3/4 mx-auto my-4" />
+                <div className="border-t border-amber-300/20 w-3/4 mx-auto my-4" />
 
                 <section>
                     <h2 className="font-baloo text-xl font-bold text-center mb-4 text-indigo-200">

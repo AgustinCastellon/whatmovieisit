@@ -9,7 +9,7 @@ import { Link, NavLink } from "react-router-dom"
 import { LoadingVideo } from "../skeleton loader/LoadingVideo"
 import { LoadingCoverImg } from "../skeleton loader/LoadingCoverImg"
 import logo from '../assets/logo (1).png'
-
+import { Navigate } from "react-router-dom";
 
 
 export const MovieGame = () => {
@@ -23,7 +23,7 @@ export const MovieGame = () => {
     }, [movie]);
 
     if (loading) return <LoadingPage />
-    if (error) return <p>{error}</p>
+    if (error) return <Navigate to="/" replace />
 
 
     const getYear = () => {
@@ -43,7 +43,7 @@ export const MovieGame = () => {
         <>
             <div className="flex flex-col justify-center items-center lg:mt-10 md:mt-1">
 
-                <div className="flex md:flex-col lg:flex-row lg:justify-between md:items-center lg:items-stretch h-auto 2xl:w-[80rem] xl:w-[68rem] lg:w-[64rem] md:w-[36rem] w-full lg:mt-5 md:mt-1 bg-black/20  border border-amber-300/20 rounded-xl shadow-lg shadow-black/50 p-4">
+                <div className="flex md:flex-col lg:flex-row lg:justify-between md:items-center lg:items-stretch h-auto 2xl:w-[80rem] xl:w-290 lg:w-[64rem] md:w-[36rem] w-full lg:mt-5 md:mt-1 bg-black/20  border border-amber-300/20 rounded-xl shadow-lg shadow-black/50 p-4">
                     <Link to={"/"}>
                         <button className="absolute md:ml-45 mt-3 lg:ml-0 lg:mt-0 rounded-md shadow-sm border-2 border-amber-300/60 px-2 py-2 text-white font-baloo text-sm flex items-center gap-1 cursor-pointer hover:bg-amber-300 hover:border-amber-300 hover:text-black transition ease-in-out duration-300">
                             <FaArrowLeft />

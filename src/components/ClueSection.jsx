@@ -31,7 +31,7 @@ export const ClueSection = ({ movie, videos, overview }) => {
     }
 
     return (
-        <div className="grid grid-cols-5 grid-rows-5 gap-4 2xl:w-320 lg:w-[64rem] 2xl:h-77 lg:h-60 xl:w-270 xl:h-65 md:w-140 md:h-79 content-center align-middle bg-black/20  border border-amber-300/20 rounded-xl shadow-lg shadow-black/50 p-5">
+        <div className="grid grid-cols-5 grid-rows-5 gap-4 2xl:w-320 lg:w-[64rem] 2xl:h-77 xl:h-75 lg:h-70 xl:w-290  md:w-140 md:h-79 content-center align-middle bg-black/20  border border-amber-300/20 rounded-xl shadow-lg shadow-black/50 p-5">
             <div
                 className="lg:col-span-2 md:col-span-3 md:col-start-2   
                             bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400  shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]

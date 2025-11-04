@@ -1,4 +1,4 @@
-import { FaFileAlt, FaInfo } from "react-icons/fa"
+import { FaCoffee, FaFileAlt, FaInfo } from "react-icons/fa"
 import { Link, NavLink } from "react-router-dom"
 import { CreditsModal } from "../components/modals/CreditsModal"
 import { useState } from "react";
@@ -69,6 +69,14 @@ export const IndexPage = () => {
                     </li>
                 </ul>
             </nav>
+            {/* <button
+                className="fixed bottom-0 left-1/2 -translate-x-1/2 mb-15 gap-2 flex font-baloo items-center justify-center text-sm text-white font-semibold  border-2 border-amber-300/60 cursor-pointer hover:bg-amber-300 hover:text-black py-2 px-4 rounded-lg shadow-md transition-all ease-in-out duration-300"
+                onClick={() => window.open("https://buymeacoffee.com/tuusuario", "_blank")}
+            >
+                <FaCoffee className="text-lg" />
+                <span>Invítame un café</span>
+            </button> */}
+            
         </div>
     )
 }

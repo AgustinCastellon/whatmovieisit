@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { CgClose } from 'react-icons/cg'
 import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa'
+import tmdbLogo from '../../assets/tmdbLogo2.svg'
 
 export const CreditsModal = ({ creditsOpen, setCreditsOpen }) => {
 
@@ -27,7 +28,7 @@ export const CreditsModal = ({ creditsOpen, setCreditsOpen }) => {
 
       <div
         className={`absolute w-[90vw] max-w-[600px] z-999 mx-auto bg-gradient-to-b from-indigo-900 to-indigo-950 rounded-xl shadow-xl 
-    border border-indigo-400/30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 text-white
+    border border-amber-300/30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-6 text-white
     transition-all duration-400 ease-in-out transform ${show
             ? 'opacity-100 scale-100 -translate-x-1/2 -translate-y-1/2'
             : 'opacity-0 scale-90 -translate-x-1/2 -translate-y-1/2'
@@ -80,11 +81,11 @@ export const CreditsModal = ({ creditsOpen, setCreditsOpen }) => {
           </div>
         </div>
 
-        <div className="border-t border-white/20 w-3/4 mx-auto my-6" />
+        <div className="border-t border-amber-300/20 w-3/4 mx-auto my-6" />
 
         <div className="flex flex-col justify-center items-center text-center w-full gap-3">
           <img
-            src="../../public/tmdbLogo2.svg"
+            src={tmdbLogo}
             alt="The Movie Database logo"
             className="w-32 opacity-90 hover:opacity-100 transition-opacity"
           />
@@ -95,7 +96,7 @@ export const CreditsModal = ({ creditsOpen, setCreditsOpen }) => {
         </div>
 
         <p className="text-center text-[0.7rem] text-gray-500 mt-6">
-          © 2025 Agustín C. — Guess The Movie
+          © 2025 Agustín C. — What Movie Is It
         </p>
       </div>
     </>

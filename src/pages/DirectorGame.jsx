@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import { MovieGuessChecker } from "../components/MovieGuessChecker"
 import { LoadingDefault } from "../skeleton loader/LoadingDefault"
 import logo from '../assets/logo (1).png'
+import { Navigate } from "react-router-dom";
 
 export const DirectorGame = () => {
 
@@ -20,7 +21,8 @@ export const DirectorGame = () => {
     }, [director]);
 
     if (isLoading) return <LoadingPage />
-    if (error) return <p>{error}</p>
+    if (error) return <Navigate to="/" replace />
+
 
     return (
         <div className="relative flex flex-col justify-center items-center h-auto 2xl:w-320 lg:w-220 xl:w-270 md:w-140 lg:mt-5 md:mt- mx-auto  bg-black/20  border border-amber-300/20 rounded-xl shadow-lg shadow-black/50 p-4">
@@ -52,10 +54,10 @@ export const DirectorGame = () => {
                                 p-[2px] bg-gradient-to-r from-amber-400 via-white to-amber-400
                                 animate-border-shine transition-all duration-500 drop-shadow-lg drop-shadow-amber-300/50 hover:rounded-xl"
                             >
-                                {imfLoading && <LoadingDefault/>}
+                                {imfLoading && <LoadingDefault />}
                                 <img
                                     src={m.imgUrl}
-                                    className="w-full h-full object-cover rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
+                                    className={`w-full h-full object-cover rounded-lg transition-all duration-300 ease-in-out group-hover:scale-105 ${imfLoading ? 'opacity-0' : 'opacity-100'}`}
                                     onLoad={() => setImfLoading(false)}
                                 />
                                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-400 bg-gradient-to-tr from-transparent via-white/30 to-transparent blur-sm"></div>
