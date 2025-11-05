@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { CgClose } from 'react-icons/cg'
 import { FaDiscord, FaGithub, FaLinkedin } from 'react-icons/fa'
 import tmdbLogo from '../../assets/tmdbLogo2.svg'
+import { FaLetterboxd, FaSquareLetterboxd } from 'react-icons/fa6'
 
 export const CreditsModal = ({ creditsOpen, setCreditsOpen }) => {
 
@@ -63,12 +64,12 @@ export const CreditsModal = ({ creditsOpen, setCreditsOpen }) => {
               <FaGithub />
             </a>
             <a
-              href=""
+              href="https://boxd.it/h7NkR"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-indigo-300 transition-colors"
             >
-              <FaLinkedin />
+              <FaSquareLetterboxd />
             </a>
             <a
               href="https://discord.com/users/957722095381540874"
