@@ -12,6 +12,7 @@ export const useFetchDirector = () => {
 
     const fetchDirector = useCallback(async () => {
         try {
+            setIsLoading(true);
             const dataMovies = await getPopularMovies();
             let directorId = null;
             let movieDetail = null;

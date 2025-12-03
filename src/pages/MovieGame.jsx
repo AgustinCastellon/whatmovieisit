@@ -18,6 +18,7 @@ export const MovieGame = () => {
     const [coverImgLoading, setCoverImgLoading] = useState(true);
     const [showTitle, setShowTitle] = useState(false);
 
+    
     useEffect(() => {
         setShowTitle(false)
     }, [movie]);
@@ -51,7 +52,7 @@ export const MovieGame = () => {
                         </button>
                     </Link>
                     <div className="flex flex-col items-center justify-between grow ">
-                        <header className="">
+                        <header className="animate-blurred-fade-in animate-duration-300">
                             <img src={logo} alt="logo" className="w-55 drop-shadow-[0_0_10px_rgba(255,200,80,0.4)]" />
                         </header>
                         <div className="flex flex-col items-center md:order-2 lg:order-0 md:my-4 lg:my-0">

@@ -13,7 +13,6 @@ export const useSearchMatch = (movie, finalTitle) => {
                     ['US', 'MX', 'AR', 'GB', 'ES'].includes(f.iso_3166_1)
                 )
                 ?.map(m => m.title) || [];
-                console.log(alternativeTitles)
         return [...titles, ...alternativeTitles]
     }
 

@@ -1,14 +1,21 @@
-import { FaCoffee, FaFileAlt, FaInfo } from "react-icons/fa"
+import { FaClock, FaCoffee, FaFileAlt, FaInfo, FaTools } from "react-icons/fa"
 import { Link, NavLink } from "react-router-dom"
 import { CreditsModal } from "../components/modals/CreditsModal"
 import { useState } from "react";
 import { HowToPlayModal } from "../components/modals/HowToPlayModal";
 import logo from '../assets/logo (1).png'
+import { FaGear } from "react-icons/fa6";
+import { RulesBattleModal } from "../components/modals/RulesBattleModal";
 
 export const IndexPage = () => {
 
     const [creditsOpen, setCreditsOpen] = useState(false);
     const [howtoOpen, setHowtoOpen] = useState(false);
+    const [rulesBattleOpen, setRulesBattleOpen] = useState(false);
+
+    const handleRulesBattle = () => {
+        setRulesBattleOpen(true);
+    }
 
     return (
         <div className="h-screen">
@@ -16,7 +23,18 @@ export const IndexPage = () => {
             {howtoOpen && <HowToPlayModal howtoOpen={howtoOpen} setHowtoOpen={setHowtoOpen} />}
             <img src={logo} alt="logo" className="w-75 mx-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.2)] animate-fadeIn" />
             <nav className="mt-3 bg-black/20 rounded-xl shadow-lg shadow-black/50 p-5 w-fit mx-auto backdrop-blur-xl border border-amber-300/30">
+
                 <ul className="font-baloo flex flex-col gap-3 text-center justify-center items-center">
+                    <li className="p-2 w-60 cursor-pointer 
+                            bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 
+                            text-yellow-950 font-bold text-center 
+                            shadow-inner shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
+                            outline-2 outline-amber-300/70
+                            hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300"
+                        onClick={handleRulesBattle}
+                    >
+                        BATALLA DE ESTRENOS
+                    </li>
                     <Link to={"game/popular"}>
                         <li className="p-2 w-60 cursor-pointer 
                             bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 
@@ -25,7 +43,7 @@ export const IndexPage = () => {
                             outline-2 outline-amber-300/70
                             hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300
                             ">
-                            NIVEL FÁCIL
+                            TAQUILLAZOS
                         </li>
                     </Link>
                     <Link to={"game/unpopular"}>
@@ -34,7 +52,7 @@ export const IndexPage = () => {
                             text-yellow-950 font-bold text-center 
                             shadow-inner shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
                             outline-2 outline-amber-300/70
-                            hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300">NIVEL DIFÍCIL</li>
+                            hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300">DESAFÍO CINÉFILO</li>
                     </Link>
                     <Link to={"game/terror"}>
                         <li className="p-2 w-60 cursor-pointer 
@@ -42,7 +60,7 @@ export const IndexPage = () => {
                             text-yellow-950 font-bold text-center 
                             shadow-inner shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
                             outline-2 outline-amber-300/70
-                            hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300">ESPECIAL HALLOWEEN</li>
+                            hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300">CINE DE TERROR</li>
                     </Link>
                     <Link to={"game/director"}>
                         <li className="p-2 w-60 cursor-pointer 
@@ -53,6 +71,7 @@ export const IndexPage = () => {
                             hover:scale-110 hover:brightness-110 transition-transform ease-in-out duration-300">ADIVINA EL DIRECTOR</li>
                     </Link>
                 </ul>
+
                 <div className="border-b border-white/30 w-56 mx-auto mt-10" />
                 <ul className="flex justify-center items-center mt-5 text-xs font-baloo gap-2">
                     <li
@@ -69,14 +88,17 @@ export const IndexPage = () => {
                     </li>
                 </ul>
             </nav>
-            {/* <button
+
+            <button
                 className="fixed bottom-0 left-1/2 -translate-x-1/2 mb-15 gap-2 flex font-baloo items-center justify-center text-sm text-white font-semibold  border-2 border-amber-300/60 cursor-pointer hover:bg-amber-300 hover:text-black py-2 px-4 rounded-lg shadow-md transition-all ease-in-out duration-300"
                 onClick={() => window.open("https://buymeacoffee.com/tuusuario", "_blank")}
             >
                 <FaCoffee className="text-lg" />
-                <span>Invítame un café</span>
-            </button> */}
-            
+                <span>Cómprame un café</span>
+            </button>
+            {rulesBattleOpen && (
+                <RulesBattleModal rulesBattleOpen={rulesBattleOpen} />
+            )}
         </div>
     )
 }

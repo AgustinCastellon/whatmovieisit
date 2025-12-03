@@ -33,7 +33,7 @@ export const ClueSection = ({ movie, videos, overview }) => {
     return (
         <div className="grid grid-cols-5 grid-rows-5 gap-4 2xl:w-320 lg:w-[64rem] 2xl:h-77 xl:h-75 lg:h-70 xl:w-290  md:w-140 md:h-79 content-center align-middle bg-black/20  border border-amber-300/20 rounded-xl shadow-lg shadow-black/50 p-5">
             <div
-                className="lg:col-span-2 md:col-span-3 md:col-start-2   
+                className="lg:col-span-2 md:col-span-3 md:col-start-2 animate-fade-in-right
                             bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400  shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
                             outline-2 outline-amber-300/70
                             hover:brightness-105 transition-transform ease-in-out duration-300
@@ -48,7 +48,7 @@ export const ClueSection = ({ movie, videos, overview }) => {
             </div>
             <div
                 className="lg:col-span-3 md:col-span-5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400  shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
-                            outline-2 outline-amber-300/70
+                            outline-2 outline-amber-300/70 animate-fade-in-down
                             hover:brightness-105 transition-transform ease-in-out duration-300
                             rounded-lg lg:row-span-2 lg:col-start-3 md:col-start-1 flex justify-center items-center cursor-pointer group shadow-lg"
                 onClick={handleOverview}
@@ -61,7 +61,7 @@ export const ClueSection = ({ movie, videos, overview }) => {
             </div>
             <div
                 className="lg:col-span-2 md:col-span-4 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400  shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
-                            outline-2 outline-amber-300/70
+                            outline-2 outline-amber-300/70 animate-fade-in-up
                             hover:brightness-105 transition-transform ease-in-out duration-300
                             rounded-lg lg:row-span-3 lg:col-start-3 row-start-3 md:row-start-2 flex justify-center items-center cursor-pointer group shadow-lg"
                 onClick={handleStarsOpen}
@@ -74,7 +74,7 @@ export const ClueSection = ({ movie, videos, overview }) => {
             </div>
             <div
                 className="lg:row-span-3  bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400  shadow-white/40 drop-shadow-[0_0_15px_rgba(255,215,0,0.5)]
-                            outline-2 outline-amber-300/70
+                            outline-2 outline-amber-300/70 animate-fade-in-left
                             hover:brightness-105 transition-transform ease-in-out duration-300
                             rounded-lg col-start-5 lg:row-start-3 flex justify-center items-center cursor-pointer group shadow-lg"
                 onClick={handleGenresOpen}
